@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FixIt Local Complaint Submission - File a local municipal or utility service complaint with photo evidence, urgency rating, and public tracking.">
+  <title>File a Complaint | FixIt Local</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Bar: Opening Hours on Left, Contact Details on Right -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <span class="top-bar-item">
+          <svg class="top-bar-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#e8590c" stroke-width="2" role="img" aria-label="Clock Icon">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+          Support Desk: Mon – Sat 8:00 AM – 6:00 PM
+        </span>
+      </div><!--
+   --><div class="top-bar-right">
+        <span class="top-bar-item">
+          <svg class="top-bar-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#e8590c" stroke-width="2" role="img" aria-label="Email Icon">
+            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+            <polyline points="22 6 12 13 2 6"></polyline>
+          </svg>
+          <a href="mailto:support@fixitlocal.org" class="top-bar-link">support@fixitlocal.org</a>
+        </span>
+        <span class="top-bar-item">
+          <svg class="top-bar-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#e8590c" stroke-width="2" role="img" aria-label="Phone Icon">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          <a href="tel:+18005553494" class="top-bar-link">+1 (800) 555-FIXIT</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header: Logo on Left, Nav Links Middle, Call-to-Action Right -->
+  <header class="site-header">
+    <div class="container header-row">
+      <div class="header-brand">
+        <a href="index.html" class="brand-link">
+          <svg class="brand-icon" width="28" height="28" viewBox="0 0 32 32" role="img" aria-label="FixIt Local Logo">
+            <rect width="32" height="32" rx="6" fill="#12304a"></rect>
+            <path d="M8 17 L13 22 L24 10" stroke="#e8590c" stroke-width="3.5" fill="none"></path>
+          </svg>
+          FixIt <span class="accent-text">Local</span>
+        </a>
+      </div><!--
+   --><nav class="site-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="providers.html" class="nav-link">Providers</a></li>
+          <li class="nav-item"><a href="complaints.html" class="nav-link">Complaints</a></li>
+          <li class="nav-item"><a href="file-complaint.html" class="nav-link active">File a complaint</a></li>
+        </ul>
+      </nav><!--
+   --><div class="header-cta">
+        <a href="file-complaint.html" class="btn btn-accent">Get started</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content (Exactly One Per Page) -->
+  <main id="main-content">
+
+    <!-- Page Banner -->
+    <div class="page-banner">
+      <div class="container">
+        <h1>File a Local Service <span class="accent-text">Complaint</span></h1>
+        <p>Report an issue with water, electricity, sanitation, plumbing, or broadband. All submissions enter our community moderation workflow before public publishing. <span class="sample-badge">Sample Data</span></p>
+      </div>
+    </div>
+
+    <!-- Complaint Form Section -->
+    <section class="section" aria-labelledby="form-heading">
+      <div class="container">
+
+        <!-- Submission Preview Section (Revealed by JavaScript upon submission) -->
+        <section id="submission-preview-section" aria-labelledby="preview-heading">
+          <h2 id="preview-heading" class="accent-text">Newly Submitted Ticket</h2>
+          <div id="submission-preview-card"></div>
+        </section>
+
+        <!-- Complaint Form Card -->
+        <div class="form-card">
+          <h2 id="form-heading" class="accent-text">Resident Complaint Submission Form</h2>
+          <p>Please provide precise information to help the service provider investigate and resolve the issue quickly.</p>
+
+          <form id="complaint-form" action="#" method="post" onsubmit="handleComplaintSubmit(); return false;">
+
+            <!-- Fieldset 1: Complaint Information -->
+            <fieldset>
+              <legend>Incident &amp; Provider Details</legend>
+
+              <div class="form-group">
+                <label for="complaint-title" class="form-label">Complaint Title (required):</label>
+                <input
+                  type="text"
+                  id="complaint-title"
+                  class="form-input"
+                  required
+                  minlength="5"
+                  maxlength="100"
+                  placeholder="e.g. Leaking water pipe at intersection of Oak &amp; 4th Street">
+              </div>
+
+              <div class="form-group">
+                <label for="complaint-provider" class="form-label">Service Provider (required):</label>
+                <input
+                  type="text"
+                  id="complaint-provider"
+                  class="form-input"
+                  list="providers-datalist"
+                  required
+                  placeholder="Select from list or type provider name">
+                <datalist id="providers-datalist">
+                  <option value="City Water Board">
+                  <option value="BrightGrid Electric">
+                  <option value="CleanStreet Waste Services">
+                  <option value="FixRight Plumbing">
+                  <option value="SwiftNet Broadband">
+                </datalist>
+              </div>
+
+              <div class="form-group">
+                <label for="complaint-category" class="form-label">Utility Category (required):</label>
+                <select id="complaint-category" class="form-select" required>
+                  <option value="">-- Choose a Service Category --</option>
+                  <optgroup label="Essential Municipal Utilities">
+                    <option value="Water Supply">Water Supply</option>
+                    <option value="Electricity">Electricity</option>
+                    <option value="Garbage &amp; Sanitation">Garbage &amp; Sanitation</option>
+                  </optgroup>
+                  <optgroup label="Domestic &amp; Private Services">
+                    <option value="Plumbing">Plumbing</option>
+                    <option value="Internet &amp; Broadband">Internet &amp; Broadband</option>
+                  </optgroup>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="complaint-date" class="form-label">Date Incident First Observed (required):</label>
+                <input type="date" id="complaint-date" class="form-input" required>
+              </div>
+
+              <div class="form-group">
+                <p class="form-label">Urgency Level:</p>
+                <div class="radio-group">
+                  <label class="radio-label">
+                    <input type="radio" name="urgency" value="Standard" checked> Standard (Within 48 hours)
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="urgency" value="High"> High (Within 24 hours)
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="urgency" value="Emergency"> Emergency (Immediate safety hazard)
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="complaint-details" class="form-label">Detailed Description (required):</label>
+                <textarea
+                  id="complaint-details"
+                  class="form-textarea"
+                  rows="5"
+                  required
+                  minlength="20"
+                  maxlength="1000"
+                  placeholder="Describe the problem, exact street location, landmark, duration of disruption, and any previous reference numbers..."></textarea>
+              </div>
+
+            </fieldset>
+
+            <!-- Fieldset 2: Evidence & Verification -->
+            <fieldset>
+              <legend>Evidence &amp; Verification</legend>
+
+              <div class="form-group">
+                <label for="complaint-photo" class="form-label">Photo Evidence Upload (optional):</label>
+                <input type="file" id="complaint-photo" class="form-input" accept="image/*">
+              </div>
+
+              <div class="form-group">
+                <label for="complaint-email" class="form-label">Resident Contact Email (required):</label>
+                <input
+                  type="email"
+                  id="complaint-email"
+                  class="form-input"
+                  required
+                  placeholder="resident@example.com">
+              </div>
+
+              <div class="form-group">
+                <label for="complaint-confirm" class="checkbox-label">
+                  <input type="checkbox" id="complaint-confirm" required>
+                  I certify that the information in this complaint is accurate, concerns a genuine local service failure, and complies with community moderation guidelines.
+                </label>
+              </div>
+
+            </fieldset>
+
+            <!-- Action Buttons: Submit and Reset -->
+            <div class="form-actions">
+              <input type="submit" value="Submit Complaint" class="btn btn-accent">
+              <input type="reset" value="Reset Form" class="btn btn-outline">
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer: Quick Links, Contact Address, Copyright Note -->
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <div class="footer-col">
+        <h3>FixIt Local</h3>
+        <p>
+          A civic tech complaint marketplace created by <strong>Team Binary Brains</strong> for the CSE326 project. Bridging communication between residents and municipal service providers for faster problem resolution.
+        </p>
+      </div><!--
+   --><div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home Overview</a></li>
+          <li><a href="providers.html">Provider Performance Directory</a></li>
+          <li><a href="complaints.html">Recent Community Complaints</a></li>
+          <li><a href="file-complaint.html">File a New Complaint</a></li>
+        </ul>
+      </div><!--
+   --><div class="footer-col">
+        <h3>Support &amp; Contact</h3>
+        <address class="footer-address">
+          Binary Brains Civic Technology Lab<br>
+          Block 34, Central Academic Campus<br>
+          Email: <a href="mailto:support@fixitlocal.org">support@fixitlocal.org</a><br>
+          Helpline: <a href="tel:+18005553494">+1 (800) 555-FIXIT</a>
+        </address>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Team Binary Brains, CSE326 Project, Section K3P26YK. All rights reserved. All service metrics and provider names are sample demonstration data.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

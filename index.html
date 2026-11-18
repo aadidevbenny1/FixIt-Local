@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FixIt Local - Local Service Complaint Marketplace by Team Binary Brains. Report municipal utility problems, track provider response, and compare local ratings.">
+  <title>FixIt Local | Local Service Complaint Marketplace</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Bar: Opening Hours on Left, Contact Details on Right -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <span class="top-bar-item">
+          <svg class="top-bar-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#e8590c" stroke-width="2" role="img" aria-label="Clock Icon">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+          Support Desk: Mon – Sat 8:00 AM – 6:00 PM
+        </span>
+      </div><!--
+   --><div class="top-bar-right">
+        <span class="top-bar-item">
+          <svg class="top-bar-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#e8590c" stroke-width="2" role="img" aria-label="Email Icon">
+            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+            <polyline points="22 6 12 13 2 6"></polyline>
+          </svg>
+          <a href="mailto:support@fixitlocal.org" class="top-bar-link">support@fixitlocal.org</a>
+        </span>
+        <span class="top-bar-item">
+          <svg class="top-bar-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#e8590c" stroke-width="2" role="img" aria-label="Phone Icon">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          <a href="tel:+18005553494" class="top-bar-link">+1 (800) 555-FIXIT</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header: Logo on Left, Nav Links Middle, Call-to-Action Right -->
+  <header class="site-header">
+    <div class="container header-row">
+      <div class="header-brand">
+        <a href="index.html" class="brand-link">
+          <svg class="brand-icon" width="28" height="28" viewBox="0 0 32 32" role="img" aria-label="FixIt Local Logo">
+            <rect width="32" height="32" rx="6" fill="#12304a"></rect>
+            <path d="M8 17 L13 22 L24 10" stroke="#e8590c" stroke-width="3.5" fill="none"></path>
+          </svg>
+          FixIt <span class="accent-text">Local</span>
+        </a>
+      </div><!--
+   --><nav class="site-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+          <li class="nav-item"><a href="providers.html" class="nav-link">Providers</a></li>
+          <li class="nav-item"><a href="complaints.html" class="nav-link">Complaints</a></li>
+          <li class="nav-item"><a href="file-complaint.html" class="nav-link">File a complaint</a></li>
+        </ul>
+      </nav><!--
+   --><div class="header-cta">
+        <a href="file-complaint.html" class="btn btn-accent">Get started</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content (Exactly One Per Page) -->
+  <main id="main-content">
+
+    <!-- Hero Section with Background Photo and Dark Semi-Transparent Panel -->
+    <section class="hero-section" aria-labelledby="hero-title">
+      <div class="hero-overlay">
+        <div class="container hero-content">
+          <span class="hero-badge">Local Service Complaint Marketplace</span>
+          <h1 id="hero-title" class="hero-title">Report problems. Get them <span class="accent-text">fixed</span>.</h1>
+          <p class="hero-subtitle">
+            Hold local utility and maintenance providers accountable. Report recurring water, power, sanitation, and broadband failures with photographic evidence, public tracking, and verified resolution rates.
+          </p>
+          <div class="hero-actions">
+            <a href="file-complaint.html" class="btn btn-accent">Report an Issue</a>
+            <a href="providers.html" class="btn btn-outline-white">Browse Providers</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section: Photo on One Side, Text + List + Badge on Other -->
+    <section class="section about-section" aria-labelledby="about-heading">
+      <div class="container about-row">
+        <div class="about-col-img">
+          <figure class="about-figure">
+            <img src="images/about-team.jpg" alt="FixIt Local support team collaborating on municipal resolution reports" width="480" height="320" class="about-img">
+            <figcaption class="about-badge">
+              <strong>507 complaints</strong>
+              <span>Logged and tracked publicly <small>(Sample Data)</small></span>
+            </figcaption>
+          </figure>
+        </div><!--
+     --><div class="about-col-text">
+          <span class="section-tagline">About Our Platform</span>
+          <h2 id="about-heading">Empowering Neighborhoods With <span class="accent-text">Transparency</span></h2>
+          <p>
+            <strong>FixIt Local</strong> is a civic complaint marketplace created by <em>Team Binary Brains</em>. We bridge the gap between frustrated residents and local service providers across municipal and domestic utility sectors.
+          </p>
+          <p>
+            Instead of unanswered helpline phone calls, every issue filed on FixIt Local is logged into an open public dashboard. Providers receive structured notices and are motivated to resolve complaints promptly to safeguard their public performance score.
+          </p>
+          <ul class="feature-list">
+            <li><strong>Verified Ticket Logging:</strong> Photo evidence upload and timestamped tracking for every complaint.</li>
+            <li><strong>Independent Provider Ratings:</strong> Fair scores based on verified resolution time and customer feedback.</li>
+            <li><strong>Public Community Board:</strong> Full transparency so neighbors can confirm if local outages are widespread.</li>
+          </ul>
+          <a href="providers.html" class="btn btn-accent">View Provider Directory</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section: Ordered List with 3 Steps -->
+    <section class="section how-section" aria-labelledby="how-heading">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="section-tagline">Simple 3-Step Process</span>
+          <h2 id="how-heading">How FixIt Local <span class="accent-text">Works</span></h2>
+          <p class="section-desc">Resolving neighbourhood utility problems is straightforward with our three-step accountability framework.</p>
+        </div>
+        <ol class="steps-list">
+          <li class="step-card">
+            <div class="step-icon-wrap">1</div>
+            <h3>Report</h3>
+            <p>
+              Fill out our simple form with category, location, and photo evidence. Your ticket enters the verified moderation queue.
+            </p>
+          </li><!--
+       --><li class="step-card">
+            <div class="step-icon-wrap">2</div>
+            <h3>Track</h3>
+            <p>
+              Watch the service provider investigate the issue, post official progress notes, and confirm when service is restored.
+            </p>
+          </li><!--
+       --><li class="step-card">
+            <div class="step-icon-wrap">3</div>
+            <h3>Compare</h3>
+            <p>
+              Review response times and resolution percentages across all utility providers to make informed decisions for your home.
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Stats Section: Definition List with 507 complaints, 5 providers, 76% resolved -->
+    <section class="section stats-section" aria-labelledby="stats-heading">
+      <div class="container">
+        <div class="section-title-wrap">
+          <h2 id="stats-heading">Platform Performance &amp; Community <span class="accent-text">Stats</span></h2>
+          <p><small>(All figures shown are demonstration Sample Data)</small></p>
+        </div>
+        <dl class="stats-list">
+          <div class="stat-item">
+            <dt class="stat-term">507</dt>
+            <dd class="stat-label">Complaints Logged</dd>
+            <dd class="stat-desc">Documented across 5 essential service categories</dd>
+          </div><!--
+       --><div class="stat-item">
+            <dt class="stat-term">5</dt>
+            <dd class="stat-label">Local Providers</dd>
+            <dd class="stat-desc">Monitored public utilities and private contractor networks</dd>
+          </div><!--
+       --><div class="stat-item">
+            <dt class="stat-term">76%</dt>
+            <dd class="stat-label">Resolved Benchmark</dd>
+            <dd class="stat-desc">Average verified issue turnaround across municipal wards</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- SVG Bar Chart Section: Complaints by Category -->
+    <section class="section chart-section" aria-labelledby="chart-heading">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="section-tagline">Visual Analytics</span>
+          <h2 id="chart-heading">Complaints by Utility <span class="accent-text">Category</span></h2>
+          <p class="section-desc">Distribution of 507 community complaint tickets across local utility sectors <span class="sample-badge">Sample Data</span></p>
+        </div>
+        <figure class="chart-figure">
+          <!-- Inline SVG Bar Chart: Uses svg, rect, line, text -->
+          <svg width="100%" height="auto" class="chart-svg" viewBox="0 0 500 230" role="img" aria-label="Bar chart showing complaints by category: Water 180, Electricity 140, Garbage 95, Plumbing 52, Internet 40">
+            <!-- Background & Axis Lines -->
+            <line x1="120" y1="20" x2="120" y2="190" stroke="#cbd5e1" stroke-width="2"></line>
+            <line x1="120" y1="190" x2="480" y2="190" stroke="#cbd5e1" stroke-width="2"></line>
+
+            <!-- Grid Scale Lines -->
+            <line x1="210" y1="20" x2="210" y2="190" stroke="#e2e8f0" stroke-width="1"></line>
+            <line x1="300" y1="20" x2="300" y2="190" stroke="#e2e8f0" stroke-width="1"></line>
+            <line x1="390" y1="20" x2="390" y2="190" stroke="#e2e8f0" stroke-width="1"></line>
+            <line x1="480" y1="20" x2="480" y2="190" stroke="#e2e8f0" stroke-width="1"></line>
+
+            <!-- Scale Labels -->
+            <text x="120" y="210" fill="#64748b" font-size="11" text-anchor="middle">0</text>
+            <text x="210" y="210" fill="#64748b" font-size="11" text-anchor="middle">50</text>
+            <text x="300" y="210" fill="#64748b" font-size="11" text-anchor="middle">100</text>
+            <text x="390" y="210" fill="#64748b" font-size="11" text-anchor="middle">150</text>
+            <text x="480" y="210" fill="#64748b" font-size="11" text-anchor="middle">200</text>
+
+            <!-- Bar 1: Water Supply (180 complaints) -->
+            <text x="110" y="48" fill="#12304a" font-size="12" font-weight="bold" text-anchor="end">Water</text>
+            <rect x="120" y="32" width="324" height="22" rx="4" fill="#12304a"></rect>
+            <text x="450" y="48" fill="#12304a" font-size="11" font-weight="bold">180</text>
+
+            <!-- Bar 2: Electricity (140 complaints) -->
+            <text x="110" y="82" fill="#12304a" font-size="12" font-weight="bold" text-anchor="end">Electricity</text>
+            <rect x="120" y="66" width="252" height="22" rx="4" fill="#e8590c"></rect>
+            <text x="378" y="82" fill="#e8590c" font-size="11" font-weight="bold">140</text>
+
+            <!-- Bar 3: Garbage & Sanitation (95 complaints) -->
+            <text x="110" y="116" fill="#12304a" font-size="12" font-weight="bold" text-anchor="end">Garbage</text>
+            <rect x="120" y="100" width="171" height="22" rx="4" fill="#12304a"></rect>
+            <text x="297" y="116" fill="#12304a" font-size="11" font-weight="bold">95</text>
+
+            <!-- Bar 4: Plumbing (52 complaints) -->
+            <text x="110" y="150" fill="#12304a" font-size="12" font-weight="bold" text-anchor="end">Plumbing</text>
+            <rect x="120" y="134" width="94" height="22" rx="4" fill="#e8590c"></rect>
+            <text x="220" y="150" fill="#e8590c" font-size="11" font-weight="bold">52</text>
+
+            <!-- Bar 5: Internet Broadband (40 complaints) -->
+            <text x="110" y="184" fill="#12304a" font-size="12" font-weight="bold" text-anchor="end">Broadband</text>
+            <rect x="120" y="168" width="72" height="22" rx="4" fill="#12304a"></rect>
+            <text x="198" y="184" fill="#12304a" font-size="11" font-weight="bold">40</text>
+          </svg>
+          <figcaption>Figure 1: Distribution of 507 community complaints across local service categories (Sample Data).</figcaption>
+        </figure>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer: Quick Links, Contact Address, Copyright Note -->
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <div class="footer-col">
+        <h3>FixIt Local</h3>
+        <p>
+          A civic tech complaint marketplace created by <strong>Team Binary Brains</strong> for the CSE326 project. Bridging communication between residents and municipal service providers for faster problem resolution.
+        </p>
+      </div><!--
+   --><div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home Overview</a></li>
+          <li><a href="providers.html">Provider Performance Directory</a></li>
+          <li><a href="complaints.html">Recent Community Complaints</a></li>
+          <li><a href="file-complaint.html">File a New Complaint</a></li>
+        </ul>
+      </div><!--
+   --><div class="footer-col">
+        <h3>Support &amp; Contact</h3>
+        <address class="footer-address">
+          Binary Brains Civic Technology Lab<br>
+          Block 34, Central Academic Campus<br>
+          Email: <a href="mailto:support@fixitlocal.org">support@fixitlocal.org</a><br>
+          Helpline: <a href="tel:+18005553494">+1 (800) 555-FIXIT</a>
+        </address>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Team Binary Brains, CSE326 Project, Section K3P26YK. All rights reserved. All service metrics and provider names are sample demonstration data.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
