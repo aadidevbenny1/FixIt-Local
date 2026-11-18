@@ -1,7 +1,7 @@
 # FixIt Local - Local Service Complaint Marketplace
 
 A front-end web project by **Team Binary Brains** (CSE326 Project, Section K3P26YK). FixIt Local connects neighborhood residents with public and private service providers to report issues, monitor response times, and compare provider ratings.
-
+Try it out now:- https://fixit-local-tau.vercel.app
 ---
 
 ## File Structure & Explanations
